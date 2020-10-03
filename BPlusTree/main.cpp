@@ -30,8 +30,8 @@ int main()
 	}
 	readStr.close();
 
-	freopen("output.txt", "w", stdout);
-	BPTree.outputTree();
+	//freopen("output.txt", "w", stdout);
+	//BPTree.outputTree();
 
 	// 读取string.txt，逐个检测是否在哈希表中，若在则写入文件reslut.txt
 	readStr.open("dictFiles\\string.txt");

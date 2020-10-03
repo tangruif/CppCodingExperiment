@@ -3,7 +3,7 @@
 #
 cmake_minimum_required (VERSION 3.8)
 
-project(experiment2)
+project(BPlusTreeSearch)
 
 # 将源代码添加到此项目的可执行文件。
 set(SOURCES
@@ -11,9 +11,9 @@ set(SOURCES
 	"src/BPlusTree.cpp"
 )
 
-add_executable (experiment2 ${SOURCES})
+add_executable (BPlusTreeSearch ${SOURCES})
 
-target_include_directories(experiment2
+target_include_directories(BPlusTreeSearch
 	PUBLIC
 	"${PROJECT_SOURCE_DIR}/include"
 )
