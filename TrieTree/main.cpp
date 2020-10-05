@@ -9,7 +9,6 @@ int main() {
 	clock_t start, finish;
 	start = clock();
 
-	// 待输入的字符串数量&期望的错误率
 	TrieTree TrTree;
 	// 将dict.txt中的字符串存入哈希表
 	ifstream readStr;
