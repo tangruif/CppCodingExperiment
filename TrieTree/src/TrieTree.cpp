@@ -25,7 +25,7 @@ bool TrieTree::addString(char* str) {
 		node = node->child[num];
 	}
 	// 标记字符串结束
-	node->num = true;
+	node->is_leaf = true;
 
 	return true;
 }
@@ -44,7 +44,7 @@ bool TrieTree::hasString(char* str)
 			return false;
 		}
 	}
-	if (node->num) {
+	if (node->is_leaf) {
 		return true;
 	}
 	return false;
@@ -55,7 +55,7 @@ void TrieTree::FlushNode(TNode* node){
 		node->child[i] = NULL;
 	}
 	// 默认非叶节点
-	node->num = false;
+	node->is_leaf = false;
 }
 
 void TrieTree::DeleteTree(TNode* node){
