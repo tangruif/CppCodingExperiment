@@ -133,14 +133,13 @@ unsigned int RadixTree::getIndex(char* str, int position)
 	int bitOffset = position % 8;
 	unsigned char ch = str[chIndex];
 	ch = ch << bitOffset;
-	ch = ch >> 8 - this->bitsPerLevel;
+	ch = ch >> (8 - this->bitsPerLevel);
 
 	return (unsigned int)ch;
 }
 
 unsigned int RadixTree::getPrefix(unsigned char* str1, unsigned char* str2, unsigned int maxBitNum)
 {
-	unsigned int prefixLength = 0;
 	unsigned int index = 0;
 	unsigned int maxLength = (maxBitNum - 1) / 8 + 1;
 	// 先以char为单位进行比较

@@ -32,7 +32,7 @@ bool BPlusTree::addString(char* str) {
 
 	if (leafNode->keyNum > order) { 
 		// 节点分裂
-		BNode* newNode = this->devideNode(leafNode);
+		this->devideNode(leafNode);
 
 		// 向上继续分裂
 		BNode* fatherNode = leafNode->parent;
